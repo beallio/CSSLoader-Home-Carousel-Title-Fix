@@ -5,6 +5,7 @@ A narrowly scoped CSSLoader theme for the Steam Deck Home screen. It hides the s
 The theme does not patch Steam files or JavaScript. On Steam builds containing Valve's native fix, the stale `ShowAsHovered` state is absent and this theme's rule matches nothing.
 
 ## Install locally
+Until the theme is available in the CSSLoader store, install it manually:
 
 1. Install [CSSLoader](https://github.com/DeckThemes/SDH-CssLoader).
 2. Copy the `Home Carousel Title Fix` folder to `/home/deck/homebrew/themes/`.
@@ -28,17 +29,6 @@ The rule activates only when:
 This preserves the default first title before controller navigation, preserves the focused item's title, and hides only the stale nonfocused title.
 
 CSSLoader-friendly class names are paired with current raw SteamUI hashes. CSSLoader can translate known historical class names through its stable/beta mapping service; the raw selectors cover the current affected SteamUI bundle.
-
-## DeckThemes submission
-
-Use the [DeckThemes submission form](https://deckthemes.com/submit/) with:
-
-- Repository URL: `https://github.com/beallio/CSSLoader-Home-Carousel-Title-Fix`
-- Subfolder: `Home Carousel Title Fix`
-- Commit ID: the release commit or tag being submitted
-- Target: `Home`
-
-Before store submission, verify the theme on the latest Steam stable and beta clients and capture an accurate post-fix preview image on a Steam Deck. Those live-device checks cannot be replaced by bundle or parser validation.
 
 ## Compatibility
 
