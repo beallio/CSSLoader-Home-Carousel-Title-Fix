@@ -8,7 +8,7 @@ The theme does not patch Steam files or JavaScript. On Steam builds containing V
 
 | Before: stale first-game title remains visible | After: only the focused game's title remains |
 | --- | --- |
-| ![Before enabling Home Carousel Title Fix](assets/home-carousel-before.png) | ![After enabling Home Carousel Title Fix](assets/home-carousel-after.png) |
+| ![Before enabling Home Carousel Title Fix](../assets/home-carousel-before.png) | ![After enabling Home Carousel Title Fix](../assets/home-carousel-after.png) |
 
 Captured on a Steam Deck with other CSSLoader themes temporarily disabled.
 
