@@ -1,0 +1,22 @@
+/*
+ * Keep Steam's default first-game label until a carousel item has focus.
+ * Then hide only a stale ShowAsHovered label whose own item is not focused.
+ * CSSLoader-friendly selectors are paired with current raw SteamUI hashes.
+ */
+:is(
+  .basicgamecarousel_BasicGameCarousel_3MdH5,
+  ._3MdH5Czolhh5rC_nofUlcQ
+):has(.gpfocuswithin)
+  :not(.gpfocuswithin)
+  > :is(
+    .basicgamecarousel_CarouselGameLabelWrapper_ZkD6W,
+    .ZkD6We6MqGbOsa9K3yiY3
+  ):is(
+    .basicgamecarousel_ShowAsHovered_3tdVJ,
+    ._3tdVJpA0NVV1y7pIQ87DkB
+  ) {
+  opacity: 0 !important;
+  transform: translateY(4px) !important;
+  visibility: hidden !important;
+  transition-delay: 0s !important;
+}

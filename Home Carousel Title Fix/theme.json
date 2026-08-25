@@ -1,0 +1,11 @@
+{
+  "name": "Home Carousel Title Fix",
+  "author": "beallio",
+  "version": "v1.0.0",
+  "manifest_version": 8,
+  "target": "Home",
+  "description": "Hides the stale first-game title when another Home carousel item has focus.",
+  "inject": {
+    "shared.css": ["SP"]
+  }
+}
