@@ -4,6 +4,14 @@ A narrowly scoped CSSLoader theme for the Steam Deck Home screen. It hides the s
 
 The theme does not patch Steam files or JavaScript. On Steam builds containing Valve's native fix, the stale `ShowAsHovered` state is absent and this theme's rule matches nothing.
 
+## Before / after
+
+| Before: stale first-game title remains visible | After: only the focused game's title remains |
+| --- | --- |
+| ![Before enabling Home Carousel Title Fix](assets/home-carousel-before.png) | ![After enabling Home Carousel Title Fix](assets/home-carousel-after.png) |
+
+Captured on a Steam Deck with other CSSLoader themes temporarily disabled.
+
 ## Install locally
 Until the theme is available in the CSSLoader store, install it manually:
 
