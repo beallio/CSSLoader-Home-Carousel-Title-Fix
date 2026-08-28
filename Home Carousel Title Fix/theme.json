@@ -1,11 +1,149 @@
 {
   "name": "Home Carousel Title Fix",
   "author": "beallio",
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "manifest_version": 8,
   "target": "Home",
-  "description": "Hides the stale first-game title when another Home carousel item has focus.",
+  "description": "Clears the stale hover state Steam leaves on the first Home carousel card when another card has focus.",
   "inject": {
-    "shared.css": ["SP"]
+    "shared.css": [
+      "SP"
+    ]
+  },
+  "patches": {
+    "Match tile brightness": {
+      "type": "slider",
+      "default": "Auto",
+      "values": {
+        "Auto": {},
+        "0.1": {
+          "--hctf-tile-brightness": [
+            "0.1",
+            "SP"
+          ]
+        },
+        "0.2": {
+          "--hctf-tile-brightness": [
+            "0.2",
+            "SP"
+          ]
+        },
+        "0.3": {
+          "--hctf-tile-brightness": [
+            "0.3",
+            "SP"
+          ]
+        },
+        "0.4": {
+          "--hctf-tile-brightness": [
+            "0.4",
+            "SP"
+          ]
+        },
+        "0.5": {
+          "--hctf-tile-brightness": [
+            "0.5",
+            "SP"
+          ]
+        },
+        "0.6": {
+          "--hctf-tile-brightness": [
+            "0.6",
+            "SP"
+          ]
+        },
+        "0.7": {
+          "--hctf-tile-brightness": [
+            "0.7",
+            "SP"
+          ]
+        },
+        "0.8": {
+          "--hctf-tile-brightness": [
+            "0.8",
+            "SP"
+          ]
+        },
+        "0.9": {
+          "--hctf-tile-brightness": [
+            "0.9",
+            "SP"
+          ]
+        },
+        "1.0": {
+          "--hctf-tile-brightness": [
+            "1.0",
+            "SP"
+          ]
+        }
+      }
+    },
+    "Match tile saturation": {
+      "type": "slider",
+      "default": "Auto",
+      "values": {
+        "Auto": {},
+        "0.1": {
+          "--hctf-tile-saturate": [
+            "0.1",
+            "SP"
+          ]
+        },
+        "0.2": {
+          "--hctf-tile-saturate": [
+            "0.2",
+            "SP"
+          ]
+        },
+        "0.3": {
+          "--hctf-tile-saturate": [
+            "0.3",
+            "SP"
+          ]
+        },
+        "0.4": {
+          "--hctf-tile-saturate": [
+            "0.4",
+            "SP"
+          ]
+        },
+        "0.5": {
+          "--hctf-tile-saturate": [
+            "0.5",
+            "SP"
+          ]
+        },
+        "0.6": {
+          "--hctf-tile-saturate": [
+            "0.6",
+            "SP"
+          ]
+        },
+        "0.7": {
+          "--hctf-tile-saturate": [
+            "0.7",
+            "SP"
+          ]
+        },
+        "0.8": {
+          "--hctf-tile-saturate": [
+            "0.8",
+            "SP"
+          ]
+        },
+        "0.9": {
+          "--hctf-tile-saturate": [
+            "0.9",
+            "SP"
+          ]
+        },
+        "1.0": {
+          "--hctf-tile-saturate": [
+            "1.0",
+            "SP"
+          ]
+        }
+      }
+    }
   }
 }

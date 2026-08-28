@@ -1,22 +1,40 @@
-/*
- * Keep Steam's default first-game label until a carousel item has focus.
- * Then hide only a stale ShowAsHovered label whose own item is not focused.
- * CSSLoader-friendly selectors are paired with current raw SteamUI hashes.
- */
-:is(
-  .basicgamecarousel_BasicGameCarousel_3MdH5,
-  ._3MdH5Czolhh5rC_nofUlcQ
-):has(.gpfocuswithin)
-  :not(.gpfocuswithin)
-  > :is(
-    .basicgamecarousel_CarouselGameLabelWrapper_ZkD6W,
-    .ZkD6We6MqGbOsa9K3yiY3
-  ):is(
-    .basicgamecarousel_ShowAsHovered_3tdVJ,
-    ._3tdVJpA0NVV1y7pIQ87DkB
-  ) {
+/* CSSLoader translates these stable selectors to the current SteamUI hashes. */
+
+/* Remove the stale title from an unfocused card. */
+.basicgamecarousel_BasicGameCarousel_3MdH5:has(.gpfocuswithin)
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.gpfocuswithin)
+  > .basicgamecarousel_CarouselGameLabelWrapper_ZkD6W.basicgamecarousel_ShowAsHovered_3tdVJ {
   opacity: 0 !important;
   transform: translateY(4px) !important;
   visibility: hidden !important;
   transition-delay: 0s !important;
+}
+
+/* Remove the stale capsule glow behind an unfocused card. */
+.basicgamecarousel_BasicGameCarousel_3MdH5:has(.gpfocuswithin)
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.gpfocuswithin)
+  .basicgamecarousel_CarouselCapsuleBackgroundGlow_1H3Kf.basicgamecarousel_ShowAsHovered_3tdVJ {
+  opacity: 0 !important;
+}
+
+/* Restore the resting tile values. */
+.basicgamecarousel_BasicGameCarousel_3MdH5:has(.gpfocuswithin)
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.gpfocuswithin)
+  .appportrait_LibraryItemBox_WYgDg.appportrait_ShowAsHovered_2YsY_ {
+  transform: none !important;
+  filter: brightness(
+      var(--hctf-tile-brightness, var(--ren-game-tile-brightness, 0.9))
+    )
+    saturate(var(--hctf-tile-saturate, var(--ren-game-tile-saturate, 1))) !important;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25) !important;
+  z-index: auto !important;
+}
+
+/* Desktop Big Picture scales the artwork instead of the tile. */
+.basicgamecarousel_BasicGameCarousel_3MdH5:has(.gpfocuswithin)
+  .basicgamecarousel_BasicGameCarouselItemMediaContainer_1HIFN:not(.gpfocuswithin)
+  .appportrait_LibraryItemBox_WYgDg.appportrait_ShowAsHovered_2YsY_
+  img {
+  transform: none !important;
+  filter: none !important;
 }
